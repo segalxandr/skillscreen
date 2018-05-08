@@ -1,0 +1,35 @@
+<div class="fixed-top container-fluid" style="position:relative; margin-top: -50px">
+
+  <h2>Encrypt String
+    <span *ngIf="stage>0"> with Method "{{encryptMethod}}"</span>
+  </h2>
+  <hr/>
+  <div class="row">
+    <div class="btn-group col-md" dropdown *ngIf="stage===0">
+      <button id="button-menu-dividers" dropdownToggle type="button" class="btn btn-primary col-md dropdown-toggle" aria-controls="dropdown-menu-dividers">
+        Encryption Method
+        <span class="caret"></span>
+      </button>
+      <ul id="dropdown-menu-dividers" *dropdownMenu class="dropdown-menu col-md " role="menu" aria-labelledby="button-menu-dividers">
+        <li role="menuitem">
+          <button class="dropdown-item" (click)='changeEncryption("A")'>Method A</button>
+        </li>
+        <li role="menuitem">
+          <button class="dropdown-item" (click)='changeEncryption("B")'>Method B</button>
+        </li>
+        <li role="menuitem">
+          <button class="dropdown-item" (click)='changeEncryption("C")'>Method C</button>
+        </li>
+      </ul>
+    </div>
+    <input type="text" placeholder="type text" class="col col-md" *ngIf="stage>0" (ngModel)="inputValue" (keyup)="onKey($event)">
+    <button class="btn btn-info btn-lg" style="margin-left: 22px;" *ngIf="stage>0" [disabled]="stringToEncrypt==''"
+      (click)="doExecute()">{{btnLabel}}</button>
+    <button class="btn btn-danger btn-lg" style="margin-left: 22px;" *ngIf="stage>0" (click)="doReset()">Reset</button>
+    <br/>
+    <div class="col-md-12 description" *ngIf="stage>0">
+      <strong>* Method "{{encryptMethod}}":</strong> {{methodDescription}}</div>
+    <div class="col-md-12 outpuptdisp" *ngIf="stage>0&&stringToDisplay!=''">
+      <strong style="color: tomato;">OUTPUT:</strong> {{stringToDisplay}}</div>
+  </div>
+</div>

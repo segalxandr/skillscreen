@@ -1,0 +1,10 @@
+.outpuptdisp {
+  margin-top: 50px;
+  border-radius: 12px;
+  border: 1px solid rebeccapurple;
+  font-weight: bolder;
+}
+.description {
+  margin-top: 50px;
+  font-family: sans-serif;
+}
