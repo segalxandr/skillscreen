@@ -1,0 +1,26 @@
+#containerMain {
+  background: rebeccapurple;
+  height: 400px;
+  width: 100%;
+
+}
+#containerViewport {
+  background: rgb(59, 59, 59);
+}
+#containerDisplay {
+  background: rgb(202, 231, 75);
+  border-radius: 12px;
+  margin: 12px;
+}
+#containerOutput {
+  background: rgb(255, 255, 255);
+}
+#containerBuild {
+  background: rgb(144, 190, 250);
+}
+.flex-container {
+  display: flex;
+}
+.flex-item {
+  border: 1px black solid;
+}

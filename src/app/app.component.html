@@ -13,17 +13,17 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['home']" [routerLinkActive]="['active']" >Home
-          <!-- <span class="sr-only">(current)</span> -->
+          <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['strencrypt']" [routerLinkActive]="['active']">String Encryption</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['starship']">Starship Builder</a>
+      </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="reqinput">Requesting User Input</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="starship">Starship Builder</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="statemach">State Machine</a>
@@ -108,6 +108,6 @@
 
 
 
-<div style="text-align:center" class="container jumbotron">
+<div style="text-align:center" class="container jumbotron container-main">
   <router-outlet></router-outlet>
 </div>
