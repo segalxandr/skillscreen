@@ -1,11 +1,27 @@
-<!-- <h1>
-  STARSHIP coming soon!
-</h1> -->
+<div class="panel" style="padding-bottom: 12px; margin-top: -30px;">
+  <h1 class="panel panel-header">
+    Create Starship
+  </h1>
+</div>
 <div id="containerMain" class="flex-container" fxLayout="row">
   <div id="containerViewport" class="flex-item" fxOrder="1" fxFlex="70" fxLayout="column">
 
-    <div id="containerDisplay" class="flex-item" fxFlex="80"  fxLayoutAlign="start" ></div>
-    <div id="containerOutput" class="flex-item" fxFlex="20" fxLayoutAlign="start end" ></div>
+    <div id="containerDisplay" class="flex-item" fxFlex="80" fxLayoutAlign="start"></div>
+    <div id="containerOutput" class="flex-item" fxFlex="20" >
+      <h3>Output</h3>
+      <h6>Starship components:</h6>
+      <div id="dispComponents" class="well well-sm"><span *ngFor="let com of starshipComponentsSelected">• {{com.name}} </span></div>
+    </div>
   </div>
-  <div id="containerBuild" class="flex-item" fxOrder="2" fxFlex="30" fxLayoutAlign="end start"></div>
+  <div id="containerBuild" class="flex-item" fxOrder="2" fxFlex="30">
+    <div class="container-fluid">
+      <h3>Add Components</h3>
+
+      <ul class="compList" >
+        <li *ngFor="let com of starship.components" ><input id="{{com.type}}" type="checkbox" (change)="checkChange($event)">
+          <label class="label" for="id_{{com}}">{{com.name}}</label>
+          </li>
+      </ul>
+    </div>
+  </div>
 </div>

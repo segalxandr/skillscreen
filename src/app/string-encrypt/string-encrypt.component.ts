@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'skill-app-string-encrypt',
   templateUrl: './string-encrypt.component.html',
   styleUrls: ['./string-encrypt.component.css']
 })

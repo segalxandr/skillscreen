@@ -1,19 +1,28 @@
 #containerMain {
   background: rebeccapurple;
-  height: 400px;
-  width: 100%;
-
+  height: 600px;
+  min-height: 200px;
+  min-width: 300px;
 }
 #containerViewport {
   background: rgb(59, 59, 59);
 }
 #containerDisplay {
-  background: rgb(202, 231, 75);
+  background: rgb(33, 97, 218);
   border-radius: 12px;
   margin: 12px;
 }
 #containerOutput {
   background: rgb(255, 255, 255);
+}
+#dispComponents {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1.1em;
 }
 #containerBuild {
   background: rgb(144, 190, 250);
@@ -23,4 +32,16 @@
 }
 .flex-item {
   border: 1px black solid;
+}
+.label {
+  font-weight: bold;
+}
+.compList {
+  text-align: left;
+  list-style-type: none;
+  margin-top: 50px;
+  border: 1px solid rgb(33, 97, 218);
+  background: rgb(122, 157, 190);
+  padding: 10px;
+  border-radius: 12px;
 }
