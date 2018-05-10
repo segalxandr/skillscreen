@@ -6,22 +6,39 @@
 <div id="containerMain" class="flex-container" fxLayout="row">
   <div id="containerViewport" class="flex-item" fxOrder="1" fxFlex="70" fxLayout="column">
 
-    <div id="containerDisplay" class="flex-item" fxFlex="80" fxLayoutAlign="start"></div>
-    <div id="containerOutput" class="flex-item" fxFlex="20" >
-      <h3>Output</h3>
-      <h6>Starship components:</h6>
-      <div id="dispComponents" class="well well-sm"><span *ngFor="let com of starshipComponentsSelected">• {{com.name}} </span></div>
+    <div id="containerDisplay" class="flex-item" fxFlex="80" fxLayoutAlign="start">
+      <div id="containerDisplayStarship" class="flex-item" fxFlex="80" fxLayoutAlign="start">
+
+        <div class="containerDisplayComponent" *ngFor="let com of starshipComponentsSelected" [ngStyle]="{'background': 'url(' + com.src + ') center no-repeat'}">
+
+        </div>
+      </div>
+    </div>
+    <div id="containerOutput" class="flex-item" fxFlex="20">
+      <h3 style="color: #ffb76b;">Output</h3>
+      <h6 style="margin-top: -10px;color: #ff7f04;">Starship components:</h6>
+      <div id="listSelectedComponents" class="well well-sm">
+        <span *ngFor="let com of starshipComponentsSelected">• {{com.name}} </span>
+      </div>
     </div>
   </div>
   <div id="containerBuild" class="flex-item" fxOrder="2" fxFlex="30">
     <div class="container-fluid">
-      <h3>Add Components</h3>
+      <h3 style="color: #ffb76b;">Add Components</h3>
 
-      <ul class="compList" >
-        <li *ngFor="let com of starship.components" ><input id="{{com.type}}" type="checkbox" (change)="checkChange($event)">
+      <ul class="listBuildComponents">
+        <li *ngFor="let com of starship.components">
+          <input id="{{com.type}}" type="checkbox" (change)="checkChange($event)">
           <label class="label" for="id_{{com}}">{{com.name}}</label>
-          </li>
+        </li>
       </ul>
+      <div class="flex-container" style="height: 320px" fxLayout="column" fxLayoutAlign="center stretch">
+        <div class="flex-item" fxLayout="row" fxLayoutAlign="space-between">
+          <button class="btn btn-lg btn-success" disabled>Select All</button>
+          <button class="btn btn-lg btn-danger"disabled>Reset</button>
+          <button class="btn btn-lg btn-warning" (click)="goBack()">Exit </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -13,11 +13,9 @@ export class StarshipComponent implements OnInit {
   // private starshipComponents = [];
   starshipComponentsSelected = [];
   starship = new Starship();
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   checkChange(e: any) {
     console.log(e.target.toString());
@@ -29,5 +27,8 @@ export class StarshipComponent implements OnInit {
       const indx = this.starshipComponentsSelected.indexOf(obj);
       this.starshipComponentsSelected.splice(indx);
     }
+  }
+  goBack() {
+    this.router.navigate(['/']);
   }
 }
