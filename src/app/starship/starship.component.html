@@ -15,7 +15,7 @@
       </div>
     </div>
     <div id="containerOutput" class="flex-item" fxFlex="20">
-      <h3 style="color: #ffb76b;">Output</h3>
+      <h3>Output</h3>
       <h6 style="margin-top: -10px;color: #ff7f04;">Starship components:</h6>
       <div id="listSelectedComponents" class="well well-sm">
         <span *ngFor="let com of starshipComponentsSelected">• {{com.name}} </span>
@@ -24,18 +24,17 @@
   </div>
   <div id="containerBuild" class="flex-item" fxOrder="2" fxFlex="30">
     <div class="container-fluid">
-      <h3 style="color: #ffb76b;">Add Components</h3>
-
+      <h3>Add Components</h3>
       <ul class="listBuildComponents">
         <li *ngFor="let com of starship.components">
-          <input id="{{com.type}}" type="checkbox" (change)="checkChange($event)">
+          <input id="{{com.type}}" type="checkbox" (change)="checkChange($event)" [checked]="com.selected">
           <label class="label" for="id_{{com}}">{{com.name}}</label>
         </li>
       </ul>
-      <div class="flex-container" style="height: 320px" fxLayout="column" fxLayoutAlign="center stretch">
-        <div class="flex-item" fxLayout="row" fxLayoutAlign="space-between">
-          <button class="btn btn-lg btn-success" disabled>Select All</button>
-          <button class="btn btn-lg btn-danger"disabled>Reset</button>
+      <div id="containerControls">
+        <div>
+          <button class="btn btn-lg btn-success" (click)="selectAllComponents()">Select All</button>
+          <button class="btn btn-lg btn-danger" (click)="reset()">Reset</button>
           <button class="btn btn-lg btn-warning" (click)="goBack()">Exit </button>
         </div>
       </div>

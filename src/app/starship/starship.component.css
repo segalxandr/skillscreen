@@ -62,7 +62,7 @@
   /* flex: 1; */
   /* justify-content: flex-start; */
 }
-.imgComponent{
+.imgComponent {
   width: 100%;
 }
 #containerOutput {
@@ -151,4 +151,117 @@
     rgb(255, 127, 4) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=1 );
+}
+h3 {
+  color: #ffb76b;
+}
+#containerControls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 180px;
+  width: 100%;
+  /* background: rebeccapurple; */
+}
+.btn {
+  margin: 3px;
+  width: 100%;
+}
+/* Smartphones (portrait and landscape) -----------  */
+@media only screen and (min-width: 20px) and (max-width: 770px) {
+  /* Styles */
+  .btn {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+  h3 {
+    font-size: 12px !important;
+    font-weight: bolder;
+  }
+  .listBuildComponents {
+    font-size: 10px;
+    font-weight: normal;
+    text-align: left;
+    list-style-type: none;
+    margin-top: 20px;
+    border: 1px solid rgb(33, 97, 218);
+    padding: 10px;
+    border-radius: 12px;
+    /* background: rgb(122, 157, 190); */
+    /* http://www.colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+50,ff7c00+51,ff7f04+100 */
+    background: rgb(255, 183, 107);
+    background: -moz-linear-gradient(
+      -45deg,
+      rgb(255, 183, 107) 0%,
+      rgb(255, 167, 61) 50%,
+      rgb(255, 124, 0) 51%,
+      rgb(255, 127, 4) 100%
+    );
+    background: -webkit-linear-gradient(
+      -45deg,
+      rgb(255, 183, 107) 0%,
+      rgb(255, 167, 61) 50%,
+      rgb(255, 124, 0) 51%,
+      rgb(255, 127, 4) 100%
+    );
+    background: linear-gradient(
+      135deg,
+      rgb(255, 183, 107) 0%,
+      rgb(255, 167, 61) 50%,
+      rgb(255, 124, 0) 51%,
+      rgb(255, 127, 4) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=1 );
+  }
+  #listSelectedComponents {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 10px;
+    line-height: 10px;
+    color: chartreuse;
+  }
+  #containerControls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 130px;
+    width: 100%;
+    /* background: rebeccapurple; */
+  }
+  #containerDisplay {
+    /* background: rgb(33, 97, 218); */
+    border-radius: 12px;
+    margin: 12px;
+    /* http://www.colorzilla.com/gradient-editor/#2464b7+0,2989d8+39,207cca+40,207cca+40,00bff9+100*/
+    background: rgb(36, 100, 183);
+    background: -moz-linear-gradient(
+      top,
+      rgb(36, 100, 183) 0%,
+      rgb(41, 137, 216) 39%,
+      rgb(32, 124, 202) 40%,
+      rgb(32, 124, 202) 40%,
+      rgb(0, 191, 249) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgb(36, 100, 183) 0%,
+      rgb(41, 137, 216) 39%,
+      rgb(32, 124, 202) 40%,
+      rgb(32, 124, 202) 40%,
+      rgb(0, 191, 249) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgb(36, 100, 183) 0%,
+      rgb(41, 137, 216) 39%,
+      rgb(32, 124, 202) 40%,
+      rgb(32, 124, 202) 40%,
+      rgb(0, 191, 249) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2464b7', endColorstr='#00bff9',GradientType=0 );
+  }
 }
